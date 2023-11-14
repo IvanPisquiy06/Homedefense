@@ -535,7 +535,7 @@
                                         <button id="q1-next" class="btn form-btn btn-next" type="button">Siguiente</button>
                                     </div>
                                 </fieldset>
-                                <fieldset id="form-step1" class="form-steps fieldset-0" data-step="1" style="display: block;" data-tag="homeowner">
+                                <fieldset id="form-step2" class="form-steps fieldset-1" data-step="2" style="display: block;" data-tag="homeowner">
                                     <legend hidden="true">Poliza</legend>
                                     <h3 class="form_box-question">¿Tiene una poliza de seguro?</h3>
                                     <div class="form-group">
@@ -558,7 +558,7 @@
                                         <button id="q1-next" class="btn form-btn btn-next" type="button">Siguiente</button>
                                     </div>
                                 </fieldset>
-                                <fieldset id="form-step2" class="form-steps fieldset-1" data-step="2" style="display: none;" data-tag="zip">
+                                <fieldset id="form-step3" class="form-steps fieldset-2" data-step="3" style="display: none;" data-tag="zip">
                                     <legend hidden="true">Código postal</legend>
                                     <h3 class="form_box-question">¿Cuál es su código postal?</h3>
                                     <div class="form-group">
@@ -575,7 +575,7 @@
                                         </div>
                                     </div>
                                 </fieldset>
-                                <fieldset id="form-step3" class="form-steps fieldset-2" data-step="3" style="display: none;" data-tag="email">
+                                <fieldset id="form-step4" class="form-steps fieldset-3" data-step="4" style="display: none;" data-tag="email">
                                     <legend hidden="true">Email</legend>
                                     <h3 class="form_box-question">¿A qué dirección e-mail deberíamos enviarle los resultados?</h3>
                                     <div class="form-group">
@@ -594,7 +594,7 @@
                                         </div>
                                     </div>
                                 </fieldset>
-                                <fieldset id="form-step4" class="form-steps fieldset-3" data-step="4" style="display: none;" data-tag="first">
+                                <fieldset id="form-step5" class="form-steps fieldset-4" data-step="5" style="display: none;" data-tag="first">
                                     <legend hidden="true">Nombre</legend>
                                     <h3 class="form_box-question">¿Cuál es su nombre?</h3>
                                     <div class="form-group">
@@ -611,7 +611,7 @@
                                         </div>
                                     </div>
                                 </fieldset>
-                                <fieldset id="form-step5" class="form-steps fieldset-4" data-step="5" style="display: none;" data-tag="last">
+                                <fieldset id="form-step6" class="form-steps fieldset-5" data-step="6" style="display: none;" data-tag="last">
                                     <legend hidden="true">Apellido</legend>
                                     <h3 class="form_box-question">¿Cuál es su apellido?</h3>
                                     <div class="form-group">
@@ -628,7 +628,7 @@
                                         </div>
                                     </div>
                                 </fieldset>
-                                <fieldset id="form-step6" class="form-steps fieldset-5" data-step="6" style="display: none;" data-tag="address">
+                                <fieldset id="form-step7" class="form-steps fieldset-6" data-step="7" style="display: none;" data-tag="address">
                                     <legend hidden="true">Dirección</legend>
                                     <h3 class="form_box-question">¿Cuál es la dirección de su casa?</h3>
                                     <div class="form-group" id="street_address">
@@ -650,7 +650,7 @@
                                         </div>
                                     </div>
                                 </fieldset>
-                                <fieldset id="form-step7" class="form-steps fieldset-6" data-step="7" style="display: none;" data-tag="phone">
+                                <fieldset id="form-step8" class="form-steps fieldset-7" data-step="8" style="display: none;" data-tag="phone">
                                     <legend hidden="true">Teléfono</legend>
                                     <p class="form_box-desc">¿A qué número de teléfono podemos contactarle?</p>
                                     <div class="form-group">
