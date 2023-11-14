@@ -460,13 +460,10 @@
                                 Revisando estado de propiedad <span>..</span> <span class="status">listo</span>
                             </p>
                             <p class="in-progress" data-timeout="1500">
-                                Analizando su factura de utilidades <span>..</span> <span class="status">listo</span>
-                            </p>
-                            <p class="in-progress" data-timeout="1500">
-                                Revisando covertura de sol en su techo <span>..</span> <span class="status">listo</span>
+                                Analizando su area <span>..</span> <span class="status">listo</span>
                             </p>
                             <p class="in-progress">
-                                Localizando proveedores de Solar en su área <span>..</span>
+                                Localizando proveedores en su área <span>..</span>
                             </p>
                             <div class="lds-ellipsis">
                                 <div></div>
