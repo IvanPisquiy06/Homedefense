@@ -551,8 +551,14 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="form-btns ml-auto text-right">
-                                        <button id="q1-next" class="btn form-btn btn-next" type="button">Siguiente</button>
+                                    <div class="row">
+                                        <div class="col colback"><a class="btn btn-link btn-back">Atrás</a></div>
+                                        <div class="col">
+                                            <div class="form-btns ml-auto text-right">
+                                                <button id="q3-next" class="btn form-btn btn-next" type="button"><span class="btn-text">Siguiente</span>
+                                                </button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </fieldset>
                                 <fieldset id="form-step3" class="form-steps fieldset-2" data-step="3" style="display: none;" data-tag="zip">
