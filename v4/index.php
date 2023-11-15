@@ -536,12 +536,10 @@
                                     <legend hidden="true">Poliza</legend>
                                     <h3 class="form_box-question">¿Tiene una poliza de seguro?</h3>
                                     <div class="form-group">
-                                            <div class="col-xs-12 col-sm-6 col-md-6">
                                                 <div class="radio-btn radio-next">
                                                     <input id="pc01" class="form-control" type="radio" name="poliza" value="Yes" required checked="" data-tf-value="false">
                                                     <label for="pc01"><span>Sí</span></label>
                                                 </div>
-                                            </div>
                                                 <div class="radio-btn">
                                                     <input id="pc02" class="form-control" type="radio" name="poliza" value="No" required data-tf-value="true">
                                                     <label for="pc02"><span>No</span></label>
