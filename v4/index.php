@@ -426,7 +426,7 @@
         let recipientNumber = $('#phone').val().replace(' ', '').replace('-', '');
         $.ajax({
             type: 'POST',
-            url: '../endpoints/send-verification.php', // Call the PHP script on your server
+            url: '/endpoints/send-verification.php', // Call the PHP script on your server
             data: {
                 recipient: recipientNumber,
                 locale: 'es'
@@ -448,6 +448,7 @@
 
     // Add event listener to the button
     $('#submit-everything').click(function(){
+        console.log("Funciona el boton")
         //Validate form
         if (!$("#verification")[0].checkValidity()) {
             alert("Please enter a valid verification code.");
@@ -461,7 +462,7 @@
         // Verify if the code is correct
         $.ajax({
             type: 'POST',
-            url: '../endpoints/verify-code.php', // Call the PHP script on your server
+            url: '/endpoints/verify-code.php', // Call the PHP script on your server
             data: {
                 recipient: recipientNumber,
                 verificationCode: code
