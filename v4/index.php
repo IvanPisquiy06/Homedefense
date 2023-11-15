@@ -532,21 +532,21 @@
                                         <button id="q1-next" class="btn form-btn btn-next" type="button">Siguiente</button>
                                     </div>
                                 </fieldset>
-                                <fieldset id="form-step2" class="form-steps fieldset-1" data-step="2" style="display: block;" data-tag="homeowner">
-                                    <legend hidden="true">Propiedad</legend>
-                                    <h3 class="form_box-question">¿Es usted dueño de una casa?</h3>
+                                <fieldset id="form-step2" class="form-steps fieldset-1" data-step="2" style="display: block;" data-tag="poliza">
+                                    <legend hidden="true">Poliza</legend>
+                                    <h3 class="form_box-question">¿Tiene una poliza de seguro?</h3>
                                     <div class="form-group">
                                         <div class="row">
                                             <div class="col-xs-12 col-sm-6 col-md-6">
                                                 <div class="radio-btn radio-next">
-                                                    <input id="pc01" class="form-control" type="radio" name="property_ownership" value="Own" required checked="" data-tf-value="false">
-                                                    <label for="pc01"><span>Sí</span></label>
+                                                    <input id="p01" class="form-control" type="radio" name="poliza" value="Si" required checked="" data-tf-value="false">
+                                                    <label for="p01"><span>Sí</span></label>
                                                 </div>
                                             </div>
                                             <div class="col-xs-12 col-sm-6 col-md-6">
                                                 <div class="radio-btn">
-                                                    <input id="pc02" class="form-control" type="radio" name="property_ownership" value="Rent" required data-tf-value="true">
-                                                    <label for="pc02"><span>No</span></label>
+                                                    <input id="p02" class="form-control" type="radio" name="poliza" value="No" required data-tf-value="true">
+                                                    <label for="p02"><span>No</span></label>
                                                 </div>
                                             </div>
                                         </div>
