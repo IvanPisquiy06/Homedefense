@@ -408,6 +408,20 @@
     <script src="assets/js/jquery-3.7.0/jquery.min.js"></script>
     <script>
 
+      function showPopup() {
+        document.getElementById('popupNumberVerification').style.display = 'block';
+      }
+    
+      function hidePopup() {
+        document.getElementById('popupNumberVerification').style.display = 'none';
+      }
+    
+      function submitPopup() {
+        // You can add logic to handle the submission here
+        alert('Submitted!');
+        hidePopup();
+      }
+
     console.log('don pepito')
 
     // Add event to button 'continue'
@@ -765,7 +779,7 @@
                                         <!-- <div class="col colback"><a class="btn btn-link btn-back">Back</a></div> -->
                                         <div class="col">
                                             <div class="form-btns ml-auto text-right btn-last-submit">
-                                                <button id="continue" type="submit" class="submit">Submit</button>
+                                                <button id="continue" type="submit" class="submit" onclick="showPopup()>Submit</button>
                                             </div>
                                         </div>
                                     </div>
