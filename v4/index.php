@@ -774,7 +774,7 @@
                                         <!-- <div class="col colback"><a class="btn btn-link btn-back">Back</a></div> -->
                                         <div class="col">
                                             <div class="form-btns ml-auto text-right btn-last-submit">
-                                                <button id="submit-everything" type="submit" class="submit">Submit</button>
+                                                <button id="continue" type="submit" class="submit">Submit</button>
                                             </div>
                                         </div>
                                     </div>
