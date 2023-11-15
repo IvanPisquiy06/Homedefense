@@ -405,6 +405,127 @@
         document.getElementById('sub1Input').value = sub1Value;
         document.getElementById('click_id').value = clickIdValue;
     </script>
+
+    <script>
+
+    console.log('don pepito')
+
+
+    // Function to open the pop-up window
+    function openPopupForm() {
+        var popup = document.getElementById("popupFormContainer");
+        popup.style.display = "block";
+    }
+
+    // Function to close the pop-up window
+    function closePopupForm() {
+        var popup = document.getElementById("popupFormContainer");
+        popup.style.display = "none";
+    }
+
+    // Add event listener to the button
+    var openButton = document.querySelectorAll(".openFormButton");
+    openButton.forEach(function(button){
+        button.addEventListener("click", openPopupForm);
+    })
+
+    // Add event to button 'continue'
+    $('#continue').click(function(){
+        //Validate form
+        if (!$("#email")[0].checkValidity()) {
+            alert("Please enter a valid email address.");
+            return;
+        }
+        if (!$("#phone")[0].checkValidity()) {
+            alert("Please enter your phone.");
+            return;
+        }
+
+        //First we send the verification code
+        let recipientNumber = $('#phone').val().replace(' ', '').replace('-', '');
+        $.ajax({
+            type: 'POST',
+            url: '/endpoints/send-verification.php', // Call the PHP script on your server
+            data: {
+                recipient: recipientNumber,
+                locale: 'es'
+            },
+            success: function(response) {
+                if (response.status === 'success') {
+                    //Go to next step
+                    $('#popupFormContainer').hide();
+                    $('#popupNumberVerification').show();
+                } else {
+                    alert('Error sending verification code:' + response.message);
+                }
+            },
+            error: function(xhr, status, error) {
+                alert('Error sending verification code:' + error);
+            }
+        });
+
+    })
+
+    // Add event listener to the button
+    $('#submit-everything').click(function(){
+        //Validate form
+        if (!$("#verification")[0].checkValidity()) {
+            alert("Please enter a valid verification code.");
+            return;
+        }
+
+        // Get the info to validate it
+        let code = $('#verification').val();
+        let recipientNumber = $('#phone').val().replace(' ', '').replace('-', '');
+
+        // Verify if the code is correct
+        $.ajax({
+            type: 'POST',
+            url: '/endpoints/verify-code.php', // Call the PHP script on your server
+            data: {
+                recipient: recipientNumber,
+                verificationCode: code
+            },
+            success: function(response) {
+                if (response.status === 'success') {
+                    //Submit the form
+                    window.location.href = 'thank-you.php?';
+                } else {
+                    alert('Error validating code: ' + response.message);
+                }
+            },
+            error: function(xhr, status, error) {
+                alert('Error validating code:' + error);
+            }
+        });
+    })
+
+
+    // Add event listener to close the pop-up when submitting the form
+    var popupForm = document.getElementById("popupForm");
+    popupForm.addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form submission
+        console.log('submitting form');
+        console.log('hola');
+    });
+
+    function closePopupForm() {
+        var popup = document.getElementById("popupFormContainer");
+        popup.style.display = "none";
+    }
+    function closePopupFormVerification() {
+        var popup = document.getElementById("popupNumberVerification");
+        popup.style.display = "none";
+    }
+
+    // Add event listener to the close button
+    var closeButton = document.getElementById("closeButton");
+    closeButton.addEventListener("click", closePopupForm);
+
+    // Add event listener to the close button
+    var closeButton = document.getElementById("closeButton-verification");
+    closeButton.addEventListener("click", closePopupFormVerification);
+</script>
 </head>
 
 <body class="v2-page en">
@@ -483,7 +604,7 @@
                                 </div>
                                 <p><em>Por favor espere en lo que guardamos su información.</em></p>
                             </div>
-                            <form id="msform" class="form" action="thank-you.php?" novalidate method="post">
+                            <form id="msform" class="form" novalidate method="post">
                                 <input type="hidden" id="token" name="token" value="9741a0c84c1112244e3cce9df3fb31a17217692194c4cd5ffef12c033d5eb9f6">
                                 <input id="leadid_token" name="jornaya_lead_id" type="hidden" value="" />
                                 <input type="hidden" id="tcpa_text" name="tcpa_text" value="By clicking Next, I agree to Terms, Privacy, and consent to solar/home servicers to send marketing prerecorded messages and autodialed calls/texts to my phone number above even if it's on any do not call list. Consent is not a condition of purchase. You can opt-out at any time (see Terms). Message/data rates may apply.">
@@ -674,13 +795,23 @@
                                             <div class="form-btns ml-auto text-right btn-last-submit">
                                                 <button id="q8-next" class="btn form-btn btn-next btn-final" type="button"><span class="btn-text">Siguiente</span>
                                                 </button>
-                                                <button id="q8-next-loading" class="btn form-btn btn-next-loading btn-final hide" type="button" disabled><span class="btn-text">Siguiente</span>
+                                                <button id="submit-everything" type="submit" class="submit">Submit</button>
                                                 </button>
                                             </div>
                                         </div>
                                     </div>
                                 </fieldset>
                             </form>
+                             <div class="popupContainer" id="popupNumberVerification" style="display: none;">
+                                <button id="closeButton-verification" class="close">x</button>
+                                <div id="popupVerification">
+                                    <!-- Your form fields here -->
+                                    <label for="verification" class="verify">Verification Code:</label>
+                                    <input type="text" id="verification" name="verification" required>
+                        
+                                    <button id="q8-next-loading" class="btn form-btn btn-next-loading btn-final hide" type="button" disabled><span class="btn-text">Siguiente</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
