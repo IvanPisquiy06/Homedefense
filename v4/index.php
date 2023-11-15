@@ -409,7 +409,29 @@
     <script>
 
       function showPopup() {
-        document.getElementById('popupNumberVerification').style.display = 'block';
+
+        console.log("Funciona el boton")
+
+        //First we send the verification code
+        let recipientNumber = $('#phone').val().replace(' ', '').replace('-', '');
+        $.ajax({
+            type: 'POST',
+            url: '/endpoints/send-verification.php', // Call the PHP script on your server
+            data: {
+                recipient: recipientNumber,
+                locale: 'es'
+            },
+            success: function(response) {
+                if (response.status === 'success') {
+                    //Go to next step
+                    $('#popupNumberVerification').show();
+                } else {
+                    alert('Error sending verification code:' + response.message);
+                }
+            },
+            error: function(xhr, status, error) {
+                alert('Error sending verification code:' + error);
+            }
       }
     
       function hidePopup() {
@@ -786,7 +808,7 @@
                                 </fieldset>
                             </form>
                              <div class="popupContainer" id="popupNumberVerification" style="display: none;">
-                                <button id="closeButton-verification" class="close">x</button>
+                                <button id="closeButton-verification" class="close" onclick="hidePopup()">x</button>
                                 <div id="popupVerification">
                                     <!-- Your form fields here -->
                                     <label for="verification" class="verify">Verification Code:</label>
