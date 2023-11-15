@@ -410,25 +410,6 @@
 
     console.log('don pepito')
 
-
-    // Function to open the pop-up window
-    function openPopupForm() {
-        var popup = document.getElementById("popupFormContainer");
-        popup.style.display = "block";
-    }
-
-    // Function to close the pop-up window
-    function closePopupForm() {
-        var popup = document.getElementById("popupFormContainer");
-        popup.style.display = "none";
-    }
-
-    // Add event listener to the button
-    var openButton = document.querySelectorAll(".openFormButton");
-    openButton.forEach(function(button){
-        button.addEventListener("click", openPopupForm);
-    })
-
     // Add event to button 'continue'
     $('#continue').click(function(){
         //Validate form
@@ -445,7 +426,7 @@
         let recipientNumber = $('#phone').val().replace(' ', '').replace('-', '');
         $.ajax({
             type: 'POST',
-            url: '/endpoints/send-verification.php', // Call the PHP script on your server
+            url: '../endpoints/send-verification.php', // Call the PHP script on your server
             data: {
                 recipient: recipientNumber,
                 locale: 'es'
@@ -453,7 +434,6 @@
             success: function(response) {
                 if (response.status === 'success') {
                     //Go to next step
-                    $('#popupFormContainer').hide();
                     $('#popupNumberVerification').show();
                 } else {
                     alert('Error sending verification code:' + response.message);
@@ -481,7 +461,7 @@
         // Verify if the code is correct
         $.ajax({
             type: 'POST',
-            url: '/endpoints/verify-code.php', // Call the PHP script on your server
+            url: '../endpoints/verify-code.php', // Call the PHP script on your server
             data: {
                 recipient: recipientNumber,
                 verificationCode: code
