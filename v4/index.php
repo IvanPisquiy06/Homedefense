@@ -532,6 +532,34 @@
                                         <button id="q1-next" class="btn form-btn btn-next" type="button">Siguiente</button>
                                     </div>
                                 </fieldset>
+                                <fieldset id="form-step2" class="form-steps fieldset-1" data-step="2" style="display: block;" data-tag="homeowner">
+                                    <legend hidden="true">Propiedad</legend>
+                                    <h3 class="form_box-question">¿Es usted dueño de una casa?</h3>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                                <div class="radio-btn radio-next">
+                                                    <input id="pc01" class="form-control" type="radio" name="property_ownership" value="Own" required checked="" data-tf-value="false">
+                                                    <label for="pc01"><span>Sí</span></label>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-6">
+                                                <div class="radio-btn">
+                                                    <input id="pc02" class="form-control" type="radio" name="property_ownership" value="Rent" required data-tf-value="true">
+                                                    <label for="pc02"><span>No</span></label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col col-xs-6 colback"><a class="btn btn-link btn-back">Atrás</a></div>
+                                        <div class="col col-xs-6">
+                                            <div class="form-btns ml-auto text-right">
+                                                <button id="q2-next" class="btn form-btn btn-next" id="btnzip" type="button"><span class="btn-text">Siguiente</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
                                 <fieldset id="form-step3" class="form-steps fieldset-2" data-step="3" style="display: none;" data-tag="zip">
                                     <legend hidden="true">Código postal</legend>
                                     <h3 class="form_box-question">¿Cuál es su código postal?</h3>
@@ -544,7 +572,7 @@
                                         <div class="col col-xs-6 colback"><a class="btn btn-link btn-back">Atrás</a></div>
                                         <div class="col col-xs-6">
                                             <div class="form-btns ml-auto text-right">
-                                                <button id="q2-next" class="btn form-btn btn-next" id="btnzip" type="button"><span class="btn-text">Siguiente</span></button>
+                                                <button id="q3-next" class="btn form-btn btn-next" id="btnzip" type="button"><span class="btn-text">Siguiente</span></button>
                                             </div>
                                         </div>
                                     </div>
@@ -562,7 +590,7 @@
                                         <div class="col colback"><a class="btn btn-link btn-back">Atrás</a></div>
                                         <div class="col">
                                             <div class="form-btns ml-auto text-right">
-                                                <button id="q3-next" class="btn form-btn btn-next" type="button"><span class="btn-text">Siguiente</span>
+                                                <button id="q4-next" class="btn form-btn btn-next" type="button"><span class="btn-text">Siguiente</span>
                                                 </button>
                                             </div>
                                         </div>
@@ -579,7 +607,7 @@
                                         <div class="col colback"><a class="btn btn-link btn-back">Atrás</a></div>
                                         <div class="col">
                                             <div class="form-btns ml-auto text-right">
-                                                <button id="q4-next" class="btn form-btn btn-next" type="button"><span class="btn-text">Siguiente</span>
+                                                <button id="q5-next" class="btn form-btn btn-next" type="button"><span class="btn-text">Siguiente</span>
                                                 </button>
                                             </div>
                                         </div>
@@ -596,7 +624,7 @@
                                         <div class="col colback"><a class="btn btn-link btn-back">Atrás</a></div>
                                         <div class="col">
                                             <div class="form-btns ml-auto text-right">
-                                                <button id="q5-next" class="btn form-btn btn-next" type="button"><span class="btn-text">Siguiente</span>
+                                                <button id="q6-next" class="btn form-btn btn-next" type="button"><span class="btn-text">Siguiente</span>
                                                 </button>
                                             </div>
                                         </div>
@@ -618,7 +646,7 @@
                                         <div class="col colback"><a class="btn btn-link btn-back">Atrás</a></div>
                                         <div class="col">
                                             <div class="form-btns ml-auto text-right">
-                                                <button id="q6-next" class="btn form-btn btn-next" type="button"><span class="btn-text">Siguiente</span>
+                                                <button id="q7-next" class="btn form-btn btn-next" type="button"><span class="btn-text">Siguiente</span>
                                                 </button>
                                             </div>
                                         </div>
