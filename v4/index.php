@@ -432,7 +432,8 @@
             error: function(xhr, status, error) {
                 alert('Error sending verification code:' + error);
             }
-      }
+      });
+}
     
       function hidePopup() {
         document.getElementById('popupNumberVerification').style.display = 'none';
