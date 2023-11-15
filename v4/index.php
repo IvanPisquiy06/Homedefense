@@ -405,22 +405,14 @@
         document.getElementById('sub1Input').value = sub1Value;
         document.getElementById('click_id').value = clickIdValue;
     </script>
-
+    <script src="assets/js/jquery-3.7.0/jquery.min.js"></script>
     <script>
 
     console.log('don pepito')
 
     // Add event to button 'continue'
     $('#continue').click(function(){
-        //Validate form
-        if (!$("#email")[0].checkValidity()) {
-            alert("Please enter a valid email address.");
-            return;
-        }
-        if (!$("#phone")[0].checkValidity()) {
-            alert("Please enter your phone.");
-            return;
-        }
+         console.log("Funciona el boton")
 
         //First we send the verification code
         let recipientNumber = $('#phone').val().replace(' ', '').replace('-', '');
@@ -448,7 +440,6 @@
 
     // Add event listener to the button
     $('#submit-everything').click(function(){
-        console.log("Funciona el boton")
         //Validate form
         if (!$("#verification")[0].checkValidity()) {
             alert("Please enter a valid verification code.");
