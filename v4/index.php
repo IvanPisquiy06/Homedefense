@@ -532,29 +532,6 @@
                                         <button id="q1-next" class="btn form-btn btn-next" type="button">Siguiente</button>
                                     </div>
                                 </fieldset>
-                                <fieldset id="form-step3" class="form-steps fieldset-2" data-step="3" style="display: block;" data-tag="poliza">
-                                    <legend hidden="true">Poliza</legend>
-                                    <h3 class="form_box-question">¿Tiene una poliza de seguro?</h3>
-                                    <div class="form-group">
-                                                <div class="radio-btn radio-next">
-                                                    <input id="pc01" class="form-control" type="radio" name="poliza" value="Yes" required checked="" data-tf-value="false">
-                                                    <label for="pc01"><span>Sí</span></label>
-                                                </div>
-                                                <div class="radio-btn">
-                                                    <input id="pc02" class="form-control" type="radio" name="poliza" value="No" required data-tf-value="true">
-                                                    <label for="pc02"><span>No</span></label>
-                                                </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col colback"><a class="btn btn-link btn-back">Atrás</a></div>
-                                        <div class="col">
-                                            <div class="form-btns ml-auto text-right">
-                                                <button id="q3-next" class="btn form-btn btn-next" type="button"><span class="btn-text">Siguiente</span>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </fieldset>
                                 <fieldset id="form-step3" class="form-steps fieldset-2" data-step="3" style="display: none;" data-tag="zip">
                                     <legend hidden="true">Código postal</legend>
                                     <h3 class="form_box-question">¿Cuál es su código postal?</h3>
