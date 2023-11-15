@@ -532,7 +532,7 @@
                                         <button id="q1-next" class="btn form-btn btn-next" type="button">Siguiente</button>
                                     </div>
                                 </fieldset>
-                                <fieldset id="form-step2" class="form-steps fieldset-1" data-step="2" style="display: block;" data-tag="poliza">
+                                <fieldset id="form-step2" class="form-steps fieldset-1" data-step="2" style="display: none;" data-tag="poliza">
                                     <legend hidden="true">Poliza</legend>
                                     <h3 class="form_box-question">¿Tiene una poliza de seguro?</h3>
                                     <div class="form-group">
