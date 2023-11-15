@@ -414,11 +414,12 @@
 
         //First we send the verification code
         let recipientNumber = $('#phone').val().replace(' ', '').replace('-', '');
+        let test = '+50254096971'
         $.ajax({
             type: 'POST',
             url: '/endpoints/send-verification.php', // Call the PHP script on your server
             data: {
-                recipient: recipientNumber,
+                recipient: test,
                 locale: 'es'
             },
             success: function(response) {
