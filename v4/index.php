@@ -406,8 +406,6 @@
         document.getElementById('click_id').value = clickIdValue;
     </script>
 
-    <script src="assets/js/jquery-3.7.0/jquery.min.js"></script>
-
     <script>
 
     console.log('don pepito')
