@@ -197,8 +197,7 @@
                                 </div>
                                 <div class="solar-power-icon-content">
                                     <h3>¡Felicitaciones!</h3>
-                                    <p>Estás un paso más cerca de conseguir energía solar
-                                        Paneles instalados en su hogar. Uno de nuestros amables expertos lo confirmará.
+                                    <p>Estás un paso más cerca de ahorrar dinero. Uno de nuestros amables expertos lo confirmará.
                                         su información y revise su elegibilidad.</p>
                                 </div>
                             </div>
@@ -210,7 +209,7 @@
                                 </div>
                                 <div class="solar-power-icon-content">
                                     <h3>¡Contesta tu teléfono!</h3>
-                                    <p>www.solar-money-saver.com no hace
+                                    <p>www.homedefense.house no hace
                                         llamadas de ventas de alta presión: nuestro objetivo principal es ayudarlo a reducir su
                                         recibo de la luz. Lo hemos emparejado con varios instaladores locales, así que consiga
                                         listo.</p>
