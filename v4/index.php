@@ -410,8 +410,6 @@
 
       function showPopup() {
 
-        console.log("Funciona el boton")
-
         if (!$("#phone")[0].checkValidity()) {
             return;
         }
@@ -419,13 +417,11 @@
         //First we send the verification code
         let recipientNumber = $('#phone').val().replace(' ', '').replace('-', '').replace('(', '').replace(')', '').replace(' ', '').replace(' ', '');
         let usNumber = '+1' + recipientNumber;
-        console.log(usNumber);
-        let test = '+50254096971'
         $.ajax({
             type: 'POST',
             url: '/endpoints/send-verification.php', // Call the PHP script on your server
             data: {
-                recipient: test,
+                recipient: usNumber,
                 locale: 'es'
             },
             success: function(response) {
@@ -455,14 +451,13 @@
         let code = $('#verification').val();
         let recipientNumber = $('#phone').val().replace(' ', '').replace('-', '').replace('(', '').replace(')', '').replace(' ', '').replace(' ', '');
         let usNumber = '+1' + recipientNumber;
-        let test2 = "+50254096971";
 
         // Verify if the code is correct
         $.ajax({
             type: 'POST',
             url: '/endpoints/verify-code.php', // Call the PHP script on your server
             data: {
-                recipient: test2,
+                recipient: usNumber,
                 verificationCode: code
             },
             success: function(response) {
@@ -479,7 +474,6 @@
         });
     };
 
-    console.log('don pepito')
 
     // Add event listener to close the pop-up when submitting the form
     var popupForm = document.getElementById("popupForm");
@@ -488,23 +482,6 @@
         console.log('submitting form');
         console.log('hola');
     });
-
-    function closePopupForm() {
-        var popup = document.getElementById("popupFormContainer");
-        popup.style.display = "none";
-    }
-    function closePopupFormVerification() {
-        var popup = document.getElementById("popupNumberVerification");
-        popup.style.display = "none";
-    }
-
-    // Add event listener to the close button
-    var closeButton = document.getElementById("closeButton");
-    closeButton.addEventListener("click", closePopupForm);
-
-    // Add event listener to the close button
-    var closeButton = document.getElementById("closeButton-verification");
-    closeButton.addEventListener("click", closePopupFormVerification);
 </script>
 </head>
 
