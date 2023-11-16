@@ -467,8 +467,6 @@
             },
             success: function(response) {
                 if (response.status === 'success') {
-                    //Submit the form
-                    e.preventDefault();
                     window.location.href = 'thank-you.php?';
                 } else {
                     alert('Error validating code: ' + response.message);
