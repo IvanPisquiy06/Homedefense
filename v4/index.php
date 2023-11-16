@@ -464,6 +464,7 @@
             success: function(response) {
                 if (response.status === 'success') {
                     //Go to next step
+                    $('#continue').hide();
                     $('#popupNumberVerification').show();
                 } else {
                     alert('Error sending verification code:' + response.message);
@@ -810,12 +811,11 @@
                                 </fieldset>
                             </form>
                              <div class="popupContainer" id="popupNumberVerification" style="display: none;">
-                                <button id="closeButton-verification" class="close" onclick="hidePopup()">x</button>
                                 <div id="popupVerification">
                                     <!-- Your form fields here -->
                                     <label for="verification" class="verify">Verification Code:</label>
                                     <input type="text" id="verification" name="verification" required>
-                                    <button id="q8-next" class="btn form-btn btn-next btn-final" type="button"><span class="btn-text">Siguiente</span></button>
+                                    <button id="submit-everything" class="btn form-btn btn-next btn-final" type="button"><span class="btn-text">Siguiente</span></button>
                                     <button id="q8-next-loading" class="btn form-btn btn-next-loading btn-final hide" type="button" disabled><span class="btn-text">Siguiente</span>
                                 </div>
                             </div>
