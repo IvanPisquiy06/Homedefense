@@ -427,7 +427,7 @@
                     //Go to next step
                     document.getElementById('continue').style.display = 'none';
                     $('#popupNumberVerification').show();
-                    document.getElementById('yourInputId').removeAttribute('disabled');
+                    document.getElementById('verification').removeAttribute('disabled');
                 } else {
                     alert('Error sending verification code:' + response.message);
                 }
