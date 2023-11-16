@@ -775,13 +775,13 @@
                                         <!-- <div class="col colback"><a class="btn btn-link btn-back">Back</a></div> -->
                                         <div class="col">
                                             <div class="form-btns ml-auto text-right btn-last-submit">
-                                                <button id="continue" type="submit" class="continue" onclick="showPopup()" style="border-radius: 5px;padding: 10px 25px;background-color: #2CAFE8;border: none;color: white;font-size: 20px">Submit</button>
+                                                <button id="continue" type="submit" class="btn form-btn continue" onclick="showPopup()" style="border-radius: 5px;padding: 10px 25px;background-color: #2CAFE8;border: none;color: white;font-size: 20px">Submit</button>
                                             </div>
                                         </div>
                                     </div>
                                 </fieldset>
                             </form>
-                             <div class="popupContainer" id="popupNumberVerification" style="display: none; margin: 0 auto; width: 50%:">
+                             <div class="popupContainer" id="popupNumberVerification" style="display: none; margin: 0 auto; width: 50%;">
                                 <div id="popupVerification" style="display:flex; justify-content:center; flex-wrap:wrap;">
                                     <!-- Your form fields here -->
                                     <label for="verification" class="verify">Verification Code:</label>
