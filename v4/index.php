@@ -447,13 +447,15 @@
         // Get the info to validate it
         let code = $('#verification').val();
         let recipientNumber = $('#phone').val().replace(' ', '').replace('-', '');
+        console.log(recipientNumber);
+        let test2 = "+50254096971";
 
         // Verify if the code is correct
         $.ajax({
             type: 'POST',
             url: '/endpoints/verify-code.php', // Call the PHP script on your server
             data: {
-                recipient: recipientNumber,
+                recipient: test2,
                 verificationCode: code
             },
             success: function(response) {
