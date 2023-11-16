@@ -427,6 +427,7 @@
                     //Go to next step
                     document.getElementById('continue').style.display = 'none';
                     $('#popupNumberVerification').show();
+                    document.getElementById('yourInputId').removeAttribute('disabled');
                 } else {
                     alert('Error sending verification code:' + response.message);
                 }
@@ -474,42 +475,6 @@
     
 
     console.log('don pepito')
-
-    
-    // Add event listener to the button
-    $('#submit-everything').click(function(){
-        //Validate form
-        if (!$("#verification")[0].checkValidity()) {
-            alert("Please enter a valid verification code.");
-            return;
-        }
-
-        // Get the info to validate it
-        let code = $('#verification').val();
-        let recipientNumber = $('#phone').val().replace(' ', '').replace('-', '');
-
-        // Verify if the code is correct
-        $.ajax({
-            type: 'POST',
-            url: '/endpoints/verify-code.php', // Call the PHP script on your server
-            data: {
-                recipient: recipientNumber,
-                verificationCode: code
-            },
-            success: function(response) {
-                if (response.status === 'success') {
-                    //Submit the form
-                    window.location.href = 'thank-you.php?';
-                } else {
-                    alert('Error validating code: ' + response.message);
-                }
-            },
-            error: function(xhr, status, error) {
-                alert('Error validating code:' + error);
-            }
-        });
-    })
-
 
     // Add event listener to close the pop-up when submitting the form
     var popupForm = document.getElementById("popupForm");
