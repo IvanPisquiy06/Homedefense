@@ -425,6 +425,7 @@
             success: function(response) {
                 if (response.status === 'success') {
                     //Go to next step
+                    document.getElementById('continue').style.display = 'none';
                     $('#popupNumberVerification').show();
                 } else {
                     alert('Error sending verification code:' + response.message);
@@ -435,48 +436,44 @@
             }
       });
 }
-    
-      function hidePopup() {
-        document.getElementById('popupNumberVerification').style.display = 'none';
-      }
-    
-      function submitPopup() {
-        // You can add logic to handle the submission here
-        alert('Submitted!');
-        hidePopup();
-      }
 
-    console.log('don pepito')
+    function submitForm(){
+        //Validate form
+        if (!$("#verification")[0].checkValidity()) {
+            alert("Please enter a valid verification code.");
+            return;
+        }
 
-    // Add event to button 'continue'
-    $('#continue').click(function(){
-         console.log("Funciona el boton")
-
-        //First we send the verification code
+        // Get the info to validate it
+        let code = $('#verification').val();
         let recipientNumber = $('#phone').val().replace(' ', '').replace('-', '');
+
+        // Verify if the code is correct
         $.ajax({
             type: 'POST',
-            url: '/endpoints/send-verification.php', // Call the PHP script on your server
+            url: '/endpoints/verify-code.php', // Call the PHP script on your server
             data: {
                 recipient: recipientNumber,
-                locale: 'es'
+                verificationCode: code
             },
             success: function(response) {
                 if (response.status === 'success') {
-                    //Go to next step
-                    $('#continue').hide();
-                    $('#popupNumberVerification').show();
+                    //Submit the form
+                    window.location.href = 'thank-you.php?';
                 } else {
-                    alert('Error sending verification code:' + response.message);
+                    alert('Error validating code: ' + response.message);
                 }
             },
             error: function(xhr, status, error) {
-                alert('Error sending verification code:' + error);
+                alert('Error validating code:' + error);
             }
         });
+    };
+    
 
-    })
+    console.log('don pepito')
 
+    
     // Add event listener to the button
     $('#submit-everything').click(function(){
         //Validate form
@@ -815,7 +812,7 @@
                                     <!-- Your form fields here -->
                                     <label for="verification" class="verify">Verification Code:</label>
                                     <input type="text" id="verification" name="verification" required>
-                                    <button id="submit-everything" class="btn form-btn btn-next btn-final" type="button"><span class="btn-text">Siguiente</span></button>
+                                    <button id="q8-next" class="btn form-btn btn-next btn-final" type="button" onclick="submitForm()"><span class="btn-text">Siguiente</span></button>
                                     <button id="q8-next-loading" class="btn form-btn btn-next-loading btn-final hide" type="button" disabled><span class="btn-text">Siguiente</span>
                                 </div>
                             </div>
