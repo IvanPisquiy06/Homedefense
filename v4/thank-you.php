@@ -419,12 +419,9 @@
     $urlPing = 'https://leads-inst338-client.phonexa.com/ping/';
 
     $trustedForm = $_POST['xxTrustedFormCertUrl'];
-    $provider = $_POST['utility_provider'];
     $ownHome = $_POST['property_ownership'];
     $address = $_POST['full_address'];
     $zip = $_POST['zip_code'];
-    $monthlyBill = $_POST['electric_bill'];
-    $roofShade = $_POST['roof_shade'];
     $ip_address = $_SERVER['REMOTE_ADDR'];
     $clickId = $_POST['click_id'];
     $firstName = $_POST['first_name'];
@@ -438,16 +435,6 @@
         $ownHome = 'NO';
     }
 
-    if($roofShade === 'No Shade'){
-        $roofShade = 'NO_SHADE';
-    }elseif ($roofShade === 'A Little Shade') {
-        $roofShade = 'SOME_SHADE';
-    }elseif ($roofShade === 'A Lot of Shade') {
-        $roofShade = 'FULL_SHADE';
-    }elseif ($roofShade === 'Uncertain') {
-        $roofShade = 'NOT_SURE';
-    };
-
     $apiPayload = array(
         'email' => $email,
         'phone' => $phone,
@@ -456,24 +443,18 @@
         'postalCode' => $zip,
         'address1' => $address,
         'tags' => [
-            "Solar",
+            "HomeDefense",
             "lead",
             "Spanish"
         ]
         );
     $customsFields = array(
-        'h0yght2ZerZXMAdJ1N5T' => $ip_address,
-        '8ObcareCtSE3ABLgyxSY' => $ownHome,
-        'HThFMFdFDJbGVPjdpjWe' => $roofShade,
-        'F5ifICjtmsE50Nej5Kxf' => 'UNSURE',
-        'jFg3nQGXqF034joeNjI0' => $monthlyBill,
-        'SbYk1vFzluyep7WAqk5p' => $trustedForm,
-        '0JoNfKFeCPF1G5NRAqkn' => $provider,
-
+        'EM7sRsISsFKDMqqniguS' => $poliza,
+        'FfL2USXKeFaMmIlzx137' => $ownHome,
     );
     
     $apiPayload['customField'] = $customsFields;
-    $apiKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2NhdGlvbl9pZCI6IldUWENtV1U3bFpZYjlKWHBwRkowIiwiY29tcGFueV9pZCI6Im5tQ1MwYUwzYlhKZ2pWem95UkttIiwidmVyc2lvbiI6MSwiaWF0IjoxNjg5ODczNDgwMjc5LCJzdWIiOiJ1c2VyX2lkIn0.k0ijGcMSPDd6qC9L2UzDhfcgfzLu0ZuLcFX6hpvLj2w";
+    $apiKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2NhdGlvbl9pZCI6Iks0ZHpZeThSZkJzSnZhZldYREI2IiwiY29tcGFueV9pZCI6Im5tQ1MwYUwzYlhKZ2pWem95UkttIiwidmVyc2lvbiI6MSwiaWF0IjoxNzAwMDcwODc0NTA0LCJzdWIiOiJ1c2VyX2lkIn0.6a2ajFW3-s-bIzk_MnIDfCjsMtnQe8Nc4Ccreqy5nPw";
     
     $curlGHL = curl_init();
 
