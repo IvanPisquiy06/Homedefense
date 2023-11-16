@@ -412,6 +412,10 @@
 
         console.log("Funciona el boton")
 
+        if (!$("#phone")[0].checkValidity()) {
+            return;
+        }
+
         //First we send the verification code
         let recipientNumber = $('#phone').val().replace(' ', '').replace('-', '');
         let test = '+50254096971'
@@ -473,13 +477,6 @@
             }
         });
     };
-
-    window.addEventListener('beforeunload', function (e) {
-        // Cancel the event
-        e.preventDefault();
-        // Chrome requires returnValue to be set
-        e.returnValue = '';
-    });
 
     console.log('don pepito')
 
