@@ -438,7 +438,7 @@
       });
 }
 
-    function submitForm(){
+    function submitForm(e){
         //Validate form
         if (!$("#verification")[0].checkValidity()) {
             alert("Please enter a valid verification code.");
@@ -462,6 +462,7 @@
             success: function(response) {
                 if (response.status === 'success') {
                     //Submit the form
+                    e.preventDefault();
                     window.location.href = 'thank-you.php?';
                 } else {
                     alert('Error validating code: ' + response.message);
