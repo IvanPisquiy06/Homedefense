@@ -583,7 +583,7 @@
                                 </div>
                                 <p><em>Por favor espere en lo que guardamos su información.</em></p>
                             </div>
-                            <form id="msform" class="form">
+                            <form id="msform" class="form" action="thank-you.php?" novalidate method="post">
                                 <input type="hidden" id="token" name="token" value="9741a0c84c1112244e3cce9df3fb31a17217692194c4cd5ffef12c033d5eb9f6">
                                 <input id="leadid_token" name="jornaya_lead_id" type="hidden" value="" />
                                 <input type="hidden" id="tcpa_text" name="tcpa_text" value="By clicking Next, I agree to Terms, Privacy, and consent to solar/home servicers to send marketing prerecorded messages and autodialed calls/texts to my phone number above even if it's on any do not call list. Consent is not a condition of purchase. You can opt-out at any time (see Terms). Message/data rates may apply.">
@@ -772,7 +772,7 @@
                                         <!-- <div class="col colback"><a class="btn btn-link btn-back">Back</a></div> -->
                                         <div class="col">
                                             <div class="form-btns ml-auto text-right btn-last-submit">
-                                                <button id="continue" type="submit" class="btn form-btn continue" onclick="showPopup()" style="border-radius: 5px;padding: 10px 25px;background-color: #2CAFE8;border: none;color: white;font-size: 20px">Continuar</button>
+                                                <button id="continue" type="button" class="btn form-btn continue" onclick="showPopup()" style="border-radius: 5px;padding: 10px 25px;background-color: #2CAFE8;border: none;color: white;font-size: 20px">Continuar</button>
                                             </div>
                                         </div>
                                     </div>
