@@ -417,7 +417,7 @@
         }
 
         //First we send the verification code
-        let recipientNumber = $('#phone').val().replace(' ', '').replace('-', '').replace('(', '').replace(')', '');
+        let recipientNumber = $('#phone').val().replace(' ', '').replace('-', '').replace('(', '').replace(')', '').replace(' ', '').replace(' ', '');
         let usNumber = '+1' + recipientNumber;
         console.log(usNumber);
         let test = '+50254096971'
@@ -453,7 +453,7 @@
 
         // Get the info to validate it
         let code = $('#verification').val();
-        let recipientNumber = $('#phone').val().replace(' ', '').replace('-', '').replace('(', '').replace(')', '');
+        let recipientNumber = $('#phone').val().replace(' ', '').replace('-', '').replace('(', '').replace(')', '').replace(' ', '').replace(' ', '');
         let usNumber = '+1' + recipientNumber;
         let test2 = "+50254096971";
 
