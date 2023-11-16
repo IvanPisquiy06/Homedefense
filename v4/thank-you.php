@@ -451,6 +451,9 @@
     $customsFields = array(
         'EM7sRsISsFKDMqqniguS' => $poliza,
         'FfL2USXKeFaMmIlzx137' => $ownHome,
+	'RJirWXtoVUqgsRhhopaA' => $clickId,
+	'ZRW8IKHGn3fcJ2wrevRw' => $trustedForm,
+	'gw1i1IfyGcWcUcES6llb' => $ip_address
     );
     
     $apiPayload['customField'] = $customsFields;
