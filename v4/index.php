@@ -783,9 +783,9 @@
                              <div class="popupContainer" id="popupNumberVerification" style="display: none; margin: 0 auto; width: 50%;">
                                 <div id="popupVerification" style="display:flex; justify-content:center; flex-wrap:wrap;">
                                     <!-- Your form fields here -->
-                                    <label for="verification" class="verify" style="margin: 0 10px;">Verification Code:</label>
+                                    <label for="verification" class="verify" style="margin: 0 10px;">Código de Verificación:</label>
                                     <input type="text" id="verification" name="verification" required style="border-radius: 5px;">
-                                    <button id="q8-next" class="btn form-btn btn-next btn-final" type="button" onclick="submitForm()"><span class="btn-text">Siguiente</span></button>
+                                    <button id="q8-next" class="btn form-btn btn-next btn-final" type="button" onclick="submitForm()" style="margin: 10px 0; width: 50%"><span class="btn-text">Siguiente</span></button>
                                     <button id="q8-next-loading" class="btn form-btn btn-next-loading btn-final hide" type="button" disabled><span class="btn-text">Siguiente</span>
                                 </div>
                             </div>
