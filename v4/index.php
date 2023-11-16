@@ -775,7 +775,7 @@
                                         <!-- <div class="col colback"><a class="btn btn-link btn-back">Back</a></div> -->
                                         <div class="col">
                                             <div class="form-btns ml-auto text-right btn-last-submit">
-                                                <button id="continue" type="submit" class="continue" onclick="showPopup()">Submit</button>
+                                                <button id="continue" type="submit" class="continue" onclick="showPopup()" style="border-radius: 5px;padding: 10px 25px;background-color: #2CAFE8;border: none;color: white;font-size: 20px">Submit</button>
                                             </div>
                                         </div>
                                     </div>
