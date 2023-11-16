@@ -451,8 +451,8 @@
 
         // Get the info to validate it
         let code = $('#verification').val();
-        let recipientNumber = $('#phone').val().replace(' ', '').replace('-', '');
-        console.log(recipientNumber);
+        let recipientNumber = $('#phone').val().replace(' ', '').replace('-', '').replace('(', '').replace(')', '');
+        console.log('+1', recipientNumber);
         let test2 = "+50254096971";
 
         // Verify if the code is correct
