@@ -3273,6 +3273,15 @@ select[multiple].input-lg, textarea.input-lg {
     user-select: none
 }
 
+.continue{
+    border-radius: 5px;
+    padding: 10px 25px;
+    background-color: #2CAFE8;
+    border: none;
+    color: white;
+    font-size: 20px;
+}
+
 .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px
