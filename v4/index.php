@@ -781,8 +781,8 @@
                                     </div>
                                 </fieldset>
                             </form>
-                             <div class="popupContainer" id="popupNumberVerification" style="display: none;">
-                                <div id="popupVerification">
+                             <div class="popupContainer" id="popupNumberVerification" style="display: none; margin: 0 auto; width: 50%:">
+                                <div id="popupVerification" style="display:flex; justify-content:center; flex-wrap:wrap;">
                                     <!-- Your form fields here -->
                                     <label for="verification" class="verify">Verification Code:</label>
                                     <input type="text" id="verification" name="verification" required>
