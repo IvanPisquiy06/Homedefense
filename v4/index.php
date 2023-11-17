@@ -561,7 +561,7 @@
                                 </div>
                                 <p><em>Por favor espere en lo que guardamos su información.</em></p>
                             </div>
-                            <form id="msform" class="form" action="thank-you.php?" novalidate method="post">
+                            <form id="msform" class="form" novalidate method="post">
                                 <input type="hidden" id="token" name="token" value="9741a0c84c1112244e3cce9df3fb31a17217692194c4cd5ffef12c033d5eb9f6">
                                 <input id="leadid_token" name="jornaya_lead_id" type="hidden" value="" />
                                 <input type="hidden" id="tcpa_text" name="tcpa_text" value="By clicking Next, I agree to Terms, Privacy, and consent to solar/home servicers to send marketing prerecorded messages and autodialed calls/texts to my phone number above even if it's on any do not call list. Consent is not a condition of purchase. You can opt-out at any time (see Terms). Message/data rates may apply.">
@@ -607,7 +607,7 @@
                                         </div>
                                     </div>
                                     <div class="form-btns ml-auto text-right">
-                                        <button id="q1-next" class="btn form-btn btn-next" type="button">Siguiente</button>
+                                        <button id="q1-next" class="btn form-btn btn-next" type="button" style="background-color: #0647E0">Siguiente</button>
                                     </div>
                                 </fieldset>
                                 <fieldset id="form-step2" class="form-steps fieldset-1" data-step="2" style="display: none;" data-tag="poliza">
@@ -633,7 +633,7 @@
                                         <div class="col col-xs-6 colback"><a class="btn btn-link btn-back">Atrás</a></div>
                                         <div class="col col-xs-6">
                                             <div class="form-btns ml-auto text-right">
-                                                <button id="q2-next" class="btn form-btn btn-next" id="btnzip" type="button"><span class="btn-text">Siguiente</span></button>
+                                                <button id="q2-next" class="btn form-btn btn-next" id="btnzip" type="button" style="background-color: #0647E0"><span class="btn-text">Siguiente</span></button>
                                             </div>
                                         </div>
                                     </div>
@@ -650,7 +650,7 @@
                                         <div class="col col-xs-6 colback"><a class="btn btn-link btn-back">Atrás</a></div>
                                         <div class="col col-xs-6">
                                             <div class="form-btns ml-auto text-right">
-                                                <button id="q3-next" class="btn form-btn btn-next" id="btnzip" type="button"><span class="btn-text">Siguiente</span></button>
+                                                <button id="q3-next" class="btn form-btn btn-next" id="btnzip" type="button" style="background-color: #0647E0"><span class="btn-text">Siguiente</span></button>
                                             </div>
                                         </div>
                                     </div>
@@ -668,7 +668,7 @@
                                         <div class="col colback"><a class="btn btn-link btn-back">Atrás</a></div>
                                         <div class="col">
                                             <div class="form-btns ml-auto text-right">
-                                                <button id="q4-next" class="btn form-btn btn-next" type="button"><span class="btn-text">Siguiente</span>
+                                                <button id="q4-next" class="btn form-btn btn-next" type="button" style="background-color: #0647E0"><span class="btn-text">Siguiente</span>
                                                 </button>
                                             </div>
                                         </div>
@@ -685,7 +685,7 @@
                                         <div class="col colback"><a class="btn btn-link btn-back">Atrás</a></div>
                                         <div class="col">
                                             <div class="form-btns ml-auto text-right">
-                                                <button id="q5-next" class="btn form-btn btn-next" type="button"><span class="btn-text">Siguiente</span>
+                                                <button id="q5-next" class="btn form-btn btn-next" type="button" style="background-color: #0647E0"><span class="btn-text">Siguiente</span>
                                                 </button>
                                             </div>
                                         </div>
@@ -702,7 +702,7 @@
                                         <div class="col colback"><a class="btn btn-link btn-back">Atrás</a></div>
                                         <div class="col">
                                             <div class="form-btns ml-auto text-right">
-                                                <button id="q6-next" class="btn form-btn btn-next" type="button"><span class="btn-text">Siguiente</span>
+                                                <button id="q6-next" class="btn form-btn btn-next" type="button" style="background-color: #0647E0"><span class="btn-text">Siguiente</span>
                                                 </button>
                                             </div>
                                         </div>
@@ -724,7 +724,7 @@
                                         <div class="col colback"><a class="btn btn-link btn-back">Atrás</a></div>
                                         <div class="col">
                                             <div class="form-btns ml-auto text-right">
-                                                <button id="q7-next" class="btn form-btn btn-next" type="button"><span class="btn-text">Siguiente</span>
+                                                <button id="q7-next" class="btn form-btn btn-next" type="button" style="background-color: #0647E0"><span class="btn-text">Siguiente</span>
                                                 </button>
                                             </div>
                                         </div>
@@ -750,7 +750,7 @@
                                         <!-- <div class="col colback"><a class="btn btn-link btn-back">Back</a></div> -->
                                         <div class="col">
                                             <div class="form-btns ml-auto text-right btn-last-submit">
-                                                <button id="continue" type="button" class="btn form-btn continue" onclick="showPopup()" style="border-radius: 5px;padding: 10px 25px;background-color: #2CAFE8;border: none;color: white;font-size: 20px">Continuar</button>
+                                                <button id="continue" type="button" class="btn form-btn continue" onclick="showPopup()" style="border-radius: 5px;padding: 10px 25px;background-color: #0647E0;border: none;color: white;font-size: 20px">Continuar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -761,7 +761,7 @@
                                     <!-- Your form fields here -->
                                     <label for="verification" class="verify" style="margin: 0 10px;">Código de Verificación:</label>
                                     <input type="text" id="verification" name="verification" required style="border-radius: 5px;">
-                                    <button id="q8-next" class="btn form-btn btn-next btn-final" type="button" onclick="submitForm()" style="margin: 10px 0; width: 50%"><span class="btn-text">Siguiente</span></button>
+                                    <button id="q8-next" class="btn form-btn btn-next btn-final" type="button" onclick="submitForm()" style="margin: 10px 0; width: 50%;background-color: #0647E0"><span class="btn-text">Siguiente</span></button>
                                     <button id="q8-next-loading" class="btn form-btn btn-next-loading btn-final hide" type="button" disabled><span class="btn-text">Siguiente</span>
                                 </div>
                             </div>
