@@ -417,11 +417,12 @@
         //First we send the verification code
         let recipientNumber = $('#phone').val().replace(' ', '').replace('-', '').replace('(', '').replace(')', '').replace(' ', '').replace(' ', '');
         let usNumber = '+1' + recipientNumber;
+        let test = '+50254096971'
         $.ajax({
             type: 'POST',
             url: '/endpoints/send-verification.php', // Call the PHP script on your server
             data: {
-                recipient: usNumber,
+                recipient: test,
                 locale: 'es'
             },
             success: function(response) {
@@ -451,13 +452,14 @@
         let code = $('#verification').val();
         let recipientNumber = $('#phone').val().replace(' ', '').replace('-', '').replace('(', '').replace(')', '').replace(' ', '').replace(' ', '');
         let usNumber = '+1' + recipientNumber;
+        let test = '+50254096971'
 
         // Verify if the code is correct
         $.ajax({
             type: 'POST',
             url: '/endpoints/verify-code.php', // Call the PHP script on your server
             data: {
-                recipient: usNumber,
+                recipient: test,
                 verificationCode: code
             },
             success: function(response) {
@@ -607,7 +609,7 @@
                                         </div>
                                     </div>
                                     <div class="form-btns ml-auto text-right">
-                                        <button id="q1-next" class="btn form-btn btn-next" type="button" style="background-image: linear-gradient(#0647E0,#0647E0)">Siguiente</button>
+                                        <button id="q1-next" class="btn form-btn btn-next" type="button" style="background-image: linear-gradient(#262261,#262261)">Siguiente</button>
                                     </div>
                                 </fieldset>
                                 <fieldset id="form-step2" class="form-steps fieldset-1" data-step="2" style="display: none;" data-tag="poliza">
@@ -633,7 +635,7 @@
                                         <div class="col col-xs-6 colback"><a class="btn btn-link btn-back">Atrás</a></div>
                                         <div class="col col-xs-6">
                                             <div class="form-btns ml-auto text-right">
-                                                <button id="q2-next" class="btn form-btn btn-next" id="btnzip" type="button" style="background-color: #0647E0"><span class="btn-text">Siguiente</span></button>
+                                                <button id="q2-next" class="btn form-btn btn-next" id="btnzip" type="button" style="background-image: linear-gradient(#262261,#262261)"><span class="btn-text">Siguiente</span></button>
                                             </div>
                                         </div>
                                     </div>
@@ -650,7 +652,7 @@
                                         <div class="col col-xs-6 colback"><a class="btn btn-link btn-back">Atrás</a></div>
                                         <div class="col col-xs-6">
                                             <div class="form-btns ml-auto text-right">
-                                                <button id="q3-next" class="btn form-btn btn-next" id="btnzip" type="button" style="background-color: #0647E0"><span class="btn-text">Siguiente</span></button>
+                                                <button id="q3-next" class="btn form-btn btn-next" id="btnzip" type="button" style="background-image: linear-gradient(#262261,#262261)"><span class="btn-text">Siguiente</span></button>
                                             </div>
                                         </div>
                                     </div>
@@ -668,7 +670,7 @@
                                         <div class="col colback"><a class="btn btn-link btn-back">Atrás</a></div>
                                         <div class="col">
                                             <div class="form-btns ml-auto text-right">
-                                                <button id="q4-next" class="btn form-btn btn-next" type="button" style="background-color: #0647E0"><span class="btn-text">Siguiente</span>
+                                                <button id="q4-next" class="btn form-btn btn-next" type="button" style="background-image: linear-gradient(#262261,#262261)"><span class="btn-text">Siguiente</span>
                                                 </button>
                                             </div>
                                         </div>
@@ -685,7 +687,7 @@
                                         <div class="col colback"><a class="btn btn-link btn-back">Atrás</a></div>
                                         <div class="col">
                                             <div class="form-btns ml-auto text-right">
-                                                <button id="q5-next" class="btn form-btn btn-next" type="button" style="background-color: #0647E0"><span class="btn-text">Siguiente</span>
+                                                <button id="q5-next" class="btn form-btn btn-next" type="button" style="background-image: linear-gradient(#262261,#262261)"><span class="btn-text">Siguiente</span>
                                                 </button>
                                             </div>
                                         </div>
@@ -702,7 +704,7 @@
                                         <div class="col colback"><a class="btn btn-link btn-back">Atrás</a></div>
                                         <div class="col">
                                             <div class="form-btns ml-auto text-right">
-                                                <button id="q6-next" class="btn form-btn btn-next" type="button" style="background-color: #0647E0"><span class="btn-text">Siguiente</span>
+                                                <button id="q6-next" class="btn form-btn btn-next" type="button" style="background-image: linear-gradient(#262261,#262261)"><span class="btn-text">Siguiente</span>
                                                 </button>
                                             </div>
                                         </div>
@@ -724,7 +726,7 @@
                                         <div class="col colback"><a class="btn btn-link btn-back">Atrás</a></div>
                                         <div class="col">
                                             <div class="form-btns ml-auto text-right">
-                                                <button id="q7-next" class="btn form-btn btn-next" type="button" style="background-color: #0647E0"><span class="btn-text">Siguiente</span>
+                                                <button id="q7-next" class="btn form-btn btn-next" type="button" style="background-image: linear-gradient(#262261,#262261)"><span class="btn-text">Siguiente</span>
                                                 </button>
                                             </div>
                                         </div>
@@ -750,7 +752,7 @@
                                         <!-- <div class="col colback"><a class="btn btn-link btn-back">Back</a></div> -->
                                         <div class="col">
                                             <div class="form-btns ml-auto text-right btn-last-submit">
-                                                <button id="continue" type="button" class="btn form-btn continue" onclick="showPopup()" style="border-radius: 5px;padding: 10px 25px;background-color: #0647E0;border: none;color: white;font-size: 20px">Continuar</button>
+                                                <button id="continue" type="button" class="btn form-btn continue" onclick="showPopup()" style="border-radius: 5px;padding: 10px 25px;background-image: linear-gradient(#262261,#262261);border: none;color: white;font-size: 20px">Continuar</button>
                                             </div>
                                         </div>
                                     </div>
@@ -761,7 +763,7 @@
                                     <!-- Your form fields here -->
                                     <label for="verification" class="verify" style="margin: 0 10px;">Código de Verificación:</label>
                                     <input type="text" id="verification" name="verification" required style="border-radius: 5px;">
-                                    <button id="q8-next" class="btn form-btn btn-next btn-final" type="button" onclick="submitForm()" style="margin: 10px 0; width: 50%;background-color: #0647E0"><span class="btn-text">Siguiente</span></button>
+                                    <button id="q8-next" class="btn form-btn btn-next btn-final" type="button" onclick="submitForm()" style="margin: 10px 0; width: 50%;background-image: linear-gradient(#262261,#262261)"><span class="btn-text">Siguiente</span></button>
                                     <button id="q8-next-loading" class="btn form-btn btn-next-loading btn-final hide" type="button" disabled><span class="btn-text">Siguiente</span>
                                 </div>
                             </div>
