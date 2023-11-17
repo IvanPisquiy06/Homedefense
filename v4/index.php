@@ -607,7 +607,7 @@
                                         </div>
                                     </div>
                                     <div class="form-btns ml-auto text-right">
-                                        <button id="q1-next" class="btn form-btn btn-next" type="button" style="background-color: #0647E0">Siguiente</button>
+                                        <button id="q1-next" class="btn form-btn btn-next" type="button" style="background-image: #0647E0">Siguiente</button>
                                     </div>
                                 </fieldset>
                                 <fieldset id="form-step2" class="form-steps fieldset-1" data-step="2" style="display: none;" data-tag="poliza">
