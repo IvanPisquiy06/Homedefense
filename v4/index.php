@@ -465,8 +465,10 @@
             success: function(response) {
                 if (response.status === 'success') {
                     e.preventDefault();
+                    document.getElementById("msform").action = "thank-you.php?";
                     document.getElementById("msform").submit();
                 } else {
+                    document.getElementById("msform").removeAttribute("action");
                     alert('Error validating code: ' + response.message);
                 }
             },
@@ -1152,11 +1154,11 @@
 
             function toggleSubmitButtons(enable) {
                 if (enable) {
-                    $("#q10-next").show();
-                    $("#q10-next-loading").hide();
+                    $("#q8-next").show();
+                    $("#q8-next-loading").hide();
                 } else {
-                    $("#q10-next").hide();
-                    $("#q10-next-loading").show();
+                    $("#q8-next").hide();
+                    $("#q8-next-loading").show();
                 }
             }
 
