@@ -465,7 +465,6 @@
             success: function(response) {
                 if (response.status === 'success') {
                     e.preventDefault();
-                    document.getElementById("msform").action = "thank-you.php?";
                     document.getElementById("msform").submit();
                 } else {
                     document.getElementById("msform").removeAttribute("action");
@@ -766,7 +765,7 @@
                                     <label for="verification" class="verify" style="margin: 0 10px;">Código de Verificación:</label>
                                     <input type="text" id="verification" name="verification" required style="border-radius: 5px;">
                                     <button id="q8-next" class="btn form-btn btn-next btn-final" type="button" onclick="submitForm()" style="margin: 10px 0; width: 50%;background-image: linear-gradient(#262261,#262261)"><span class="btn-text">Siguiente</span></button>
-                                    <button id="q8-next-loading" class="btn form-btn btn-next-loading btn-final hide" type="button" disabled><span class="btn-text">Siguiente</span>
+                                    <button id="q8-next-loading" class="btn form-btn btn-next-loading btn-final hide" type="button" style="margin: 10px 0; width: 50%;background-image: linear-gradient(#262261,#262261)" disabled><span class="btn-text">Siguiente</span>
                                 </div>
                             </div>
                         </div>
