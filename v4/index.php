@@ -523,7 +523,7 @@
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 offset-lg-2">
                     <div id="form-header" class="heading-survey">
                         <h3>¡Obten tu cita gratis!</h3>
-                        <h4>Responde esta encuesta hasta el final parapre-calificar a los incentivos de energías limpias.</h4>
+                        <h4>Responde esta encuesta hasta el final para pre-calificar a los incentivos de energías limpias.</h4>
                     </div>
                     <div class="banner-form-wrap">
                         <div class="progress_box">
