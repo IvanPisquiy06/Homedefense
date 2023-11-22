@@ -428,8 +428,6 @@
             success: function(response) {
                 if (response.status === 'success') {
                     //Go to next step
-                    document.getElementById('continue').style.display = 'none';
-                    $('#popupNumberVerification').show();
                     document.getElementById('verification').removeAttribute('disabled');
                 } else {
                     alert('Error sending verification code:' + response.message);
@@ -733,7 +731,7 @@
                                         </div>
                                     </div>
                                 </fieldset>
-                                <fieldset id="form-step8" class="form-steps fieldset-7" data-step="8" style="display: none;" data-tag="phone">
+                                <fieldset id="form-step8" class="form-steps fieldset-7" data-step="8" style="display: none;" data-tag="address">
                                     <legend hidden="true">Teléfono</legend>
                                     <p class="form_box-desc">¿A qué número de teléfono podemos contactarle?</p>
                                     <div class="form-group">
@@ -749,25 +747,30 @@
                                         </label>
                                     </span>
                                     <div class="row">
+                                        <div class="col colback"><a class="btn btn-link btn-back">Atrás</a></div>
+                                        <div class="col">
+                                            <div class="form-btns ml-auto text-right">
+                                                <button id="q7-next" class="btn form-btn btn-next" type="button" onclick="showPopup()" style="background-image: linear-gradient(#262261,#262261)"><span class="btn-text">Siguiente</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset id="form-step9" class="form-steps fieldset-8" data-step="9" style="display: none;" data-tag="phone">
+                                    <label for="verification" class="verify" style="margin: 0 10px;">Código de Verificación:</label>
+                                    <input type="text" id="verification" name="verification" required style="border-radius: 5px;">
+                                    <div class="row">
                                         <!-- <div class="col colback col-last"><button type="button" class="btn btn-link btn-back just-text">Back</button></div> -->
                                         <!-- <div class="col colback"><a class="btn btn-link btn-back">Back</a></div> -->
                                         <div class="col">
                                             <div class="form-btns ml-auto text-right btn-last-submit">
-                                                <button id="continue" type="button" class="btn form-btn continue" onclick="showPopup()" style="border-radius: 5px;padding: 10px 25px;background-image: linear-gradient(#262261,#262261);border: none;color: white;font-size: 20px">Continuar</button>
+                                                <button id="q8-next" class="btn form-btn btn-next btn-final" type="button" onclick="submitForm()" style="margin: 10px 0; width: 50%;background-image: linear-gradient(#262261,#262261)"><span class="btn-text">Siguiente</span></button>
+                                                <button id="q8-next-loading" class="btn form-btn btn-next-loading btn-final hide" type="button" style="margin: 10px 0; width: 50%;background-image: linear-gradient(#262261,#262261)" disabled><span class="btn-text">Siguiente</span>
                                             </div>
                                         </div>
                                     </div>
                                 </fieldset>
                             </form>
-                             <div class="popupContainer" id="popupNumberVerification" style="display: none; margin: 0 auto; width: 50%;">
-                                <div id="popupVerification" style="display:flex; justify-content:center; flex-wrap:wrap;">
-                                    <!-- Your form fields here -->
-                                    <label for="verification" class="verify" style="margin: 0 10px;">Código de Verificación:</label>
-                                    <input type="text" id="verification" name="verification" required style="border-radius: 5px;">
-                                    <button id="q8-next" class="btn form-btn btn-next btn-final" type="button" onclick="submitForm()" style="margin: 10px 0; width: 50%;background-image: linear-gradient(#262261,#262261)"><span class="btn-text">Siguiente</span></button>
-                                    <button id="q8-next-loading" class="btn form-btn btn-next-loading btn-final hide" type="button" style="margin: 10px 0; width: 50%;background-image: linear-gradient(#262261,#262261)" disabled><span class="btn-text">Siguiente</span>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
