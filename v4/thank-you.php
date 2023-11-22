@@ -214,19 +214,6 @@
                                     <h3>¡Felicitaciones!</h3>
                                     <p>Estás un paso más cerca de ahorrar dinero. Uno de nuestros amables expertos revisará su información y su elegibilidad. Le estaremos contactando acerca de su aplicación con información que pueda interesarle. Esté atento!</p>
 			</div>
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
-                                    <h3>¡Contesta tu teléfono!</h3>
-                                    <p>www.homedefense.house no hace
-                                        llamadas de ventas de alta presión: nuestro objetivo principal es ayudarlo a reducir su
-                                        recibo de la luz. Lo hemos emparejado con varios instaladores locales, así que consiga
-                                        listo.</p>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
-                                <h3>¡Coge un bolígrafo!</h3>
-                                    <p>Estás a pocos minutos de una completa
-                                        ahorros y desglose de los costos. Cuando nuestros profesionales llamen, asegúrese de
-                                        anota sus citas y pregunta cualquier duda que tengas.</p>
-                        </div>
                     </div>
                 </div>
             </div>
