@@ -765,7 +765,7 @@
                                         <div class="col colback"><a class="btn btn-link btn-back">Atrás</a></div>
                                         <div class="col">
                                             <div class="form-btns ml-auto text-right btn-last-submit">
-                                                <button id="q8-next" class="btn form-btn btn-next btn-final" type="button" onclick="submitForm()" style="margin: 10px 0; width: 50%;background-image: linear-gradient(#262261,#262261)"><span class="btn-text">Siguiente</span></button>
+                                                <button id="q8-next" class="btn form-btn btn-next btn-final" type="button" onclick="submitForm()" style="background-image: linear-gradient(#262261,#262261)"><span class="btn-text">Siguiente</span></button>
                                                 <button id="q8-next-loading" class="btn form-btn btn-next-loading btn-final hide" type="button" style="margin: 10px 0; width: 50%;background-image: linear-gradient(#262261,#262261)" disabled><span class="btn-text">Siguiente</span>
                                             </div>
                                         </div>
