@@ -189,7 +189,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                         <div class="thank-txt">
-                            <h3>Your Info has been submitted!</h3>
+                            <h3>¡Tu información ha sido enviada!</h3>
                         </div>
                     </div>
                 </div>
@@ -203,7 +203,7 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                             <div class="thank-txt">
-                                <h3 style="font-weight: normal">Here are your next steps:</h3>
+                                <h3 style="font-weight: normal">Estos son los siguientes pasos:</h3>
                             </div>
                         </div>
                     </div>
@@ -211,43 +211,21 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
-                            <div class="solar-main-wrap">
-                                <div class="solar-power-icon">
-                                    <img src="thank-you_files/thank-icon-1.png" class="img-fluid" alt="Icon" title="">
-                                </div>
-                                <div class="solar-power-icon-content">
                                     <h3>¡Felicitaciones!</h3>
-                                    <p>Estás un paso más cerca de ahorrar dinero. Uno de nuestros amables expertos lo confirmará.
-                                        su información y revise su elegibilidad.</p>
-                                </div>
-                            </div>
-                        </div>
+                                    <p>Estás un paso más cerca de ahorrar dinero. Uno de nuestros amables expertos revisará su información y su elegibilidad. Le estaremos contactando acerca de su aplicación con información que pueda interesarle. Esté atento!</p>
+			</div>
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
-                            <div class="solar-main-wrap">
-                                <div class="solar-power-icon">
-                                    <img src="thank-you_files/thank-icon-2.png" class="img-fluid" alt="Icon" title="">
-                                </div>
-                                <div class="solar-power-icon-content">
                                     <h3>¡Contesta tu teléfono!</h3>
                                     <p>www.homedefense.house no hace
                                         llamadas de ventas de alta presión: nuestro objetivo principal es ayudarlo a reducir su
                                         recibo de la luz. Lo hemos emparejado con varios instaladores locales, así que consiga
                                         listo.</p>
-                                </div>
-                            </div>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
-                            <div class="solar-main-wrap">
-                                <div class="solar-power-icon">
-                                    <img src="thank-you_files/thank-icon-3.png" class="img-fluid" alt="Icon" title="">
-                                </div>
-                                <div class="solar-power-icon-content">
                                 <h3>¡Coge un bolígrafo!</h3>
                                     <p>Estás a pocos minutos de una completa
                                         ahorros y desglose de los costos. Cuando nuestros profesionales llamen, asegúrese de
                                         anota sus citas y pregunta cualquier duda que tengas.</p>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -256,7 +234,7 @@
         <!-- /Solar Power Option Icon Content  -->
     </div>
 
-    <footer>
+    <footer style="background: #262261;">
         <div class="container">
             <div class="solar-footer-content">
 
