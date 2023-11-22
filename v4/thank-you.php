@@ -209,7 +209,7 @@
                     </div>
                 </div>
                 <div class="container">
-                    <div class="row">
+                    <div class="row" style="justify-content: center;">
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4">
                                     <h3>¡Felicitaciones!</h3>
                                     <p>Estás un paso más cerca de ahorrar dinero. Uno de nuestros amables expertos revisará su información y su elegibilidad. Le estaremos contactando acerca de su aplicación con información que pueda interesarle. Esté atento!</p>
