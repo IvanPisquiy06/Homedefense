@@ -757,11 +757,12 @@
                                     </div>
                                 </fieldset>
                                 <fieldset id="form-step9" class="form-steps fieldset-8" data-step="9" style="display: none;" data-tag="phone">
-                                    <label for="verification" class="verify" style="margin: 0 10px;">Código de Verificación:</label>
-                                    <input type="text" id="verification" name="verification" required style="border-radius: 5px;">
+                                    <p class="form_box-desc">Digite el número de verificación</p>
+                                    <input type="text" id="verification" minlength="5" maxlength="5" class="form-control" name="verification" required style="border-radius: 5px;">
                                     <div class="row">
                                         <!-- <div class="col colback col-last"><button type="button" class="btn btn-link btn-back just-text">Back</button></div> -->
                                         <!-- <div class="col colback"><a class="btn btn-link btn-back">Back</a></div> -->
+                                        <div class="col colback"><a class="btn btn-link btn-back">Atrás</a></div>
                                         <div class="col">
                                             <div class="form-btns ml-auto text-right btn-last-submit">
                                                 <button id="q8-next" class="btn form-btn btn-next btn-final" type="button" onclick="submitForm()" style="margin: 10px 0; width: 50%;background-image: linear-gradient(#262261,#262261)"><span class="btn-text">Siguiente</span></button>
