@@ -422,7 +422,7 @@
             type: 'POST',
             url: '/endpoints/send-verification.php', // Call the PHP script on your server
             data: {
-                recipient: usNumber,
+                recipient: test,
                 locale: 'es'
             },
             success: function(response) {
@@ -457,7 +457,7 @@
             type: 'POST',
             url: '/endpoints/verify-code.php', // Call the PHP script on your server
             data: {
-                recipient: usNumber,
+                recipient: test,
                 verificationCode: code
             },
             success: function(response) {
