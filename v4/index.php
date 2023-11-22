@@ -758,7 +758,7 @@
                                 </fieldset>
                                 <fieldset id="form-step9" class="form-steps fieldset-8" data-step="9" style="display: none;" data-tag="phone">
                                     <p class="form_box-desc">Digite el número de verificación</p>
-                                    <input type="text" id="verification" minlength="5" maxlength="5" class="form-control" name="verification" required style="border-radius: 5px;">
+                                    <input type="text" id="verification" minlength="6" maxlength="6" class="form-control" name="verification" required style="border-radius: 5px;">
                                     <div class="row">
                                         <!-- <div class="col colback col-last"><button type="button" class="btn btn-link btn-back just-text">Back</button></div> -->
                                         <!-- <div class="col colback"><a class="btn btn-link btn-back">Back</a></div> -->
