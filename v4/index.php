@@ -520,8 +520,8 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 offset-lg-2">
                     <div id="form-header" class="heading-survey">
-                        <h3>¡Protección del hogar - Asegura tu consulta gratuita!</h3>
-                        <h4>Complete nuestra encuesta para pre-calificar para los beneficios de ajuste público. Descubra cómo podemos ayudarle a maximizar sus reclamaciones de propiedad</h4>
+                        <h3>¡CALIFICA PARA UNA EVALUACIÓN GRATUITA!</h3>
+                        <h4>Responde esta encuesta hasta el final para que uno de nuestros especialistas te ayude a obtener la máxima compensación por tu reclamo de seguros</h4>
                     </div>
                     <div class="banner-form-wrap">
                         <div class="progress_box">
