@@ -170,8 +170,8 @@
                                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                                         <div class="logo">
                                             <h1>
-                                                <a href="https://www.solar-money-saver.com/v4/index.php" title="Smart Solar Savings">
-                                                    <img src="/assets/images/logo1.png" class="img-fluid" alt="Smart Solar Savings" title="Smart Solar Savings">
+                                                <a href="https://homedefense.house/" title="HomeDefense">
+                                                    <img src="/assets/images/logo1.png" class="img-fluid" alt="Smart Solar Savings" title="Home Defense">
                                                 </a>
                                             </h1>
                                         </div>
