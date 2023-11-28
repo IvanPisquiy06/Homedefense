@@ -474,15 +474,6 @@
             }
         });
     };
-
-
-    // Add event listener to close the pop-up when submitting the form
-    var popupForm = document.getElementById("popupForm");
-    popupForm.addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent form submission
-        console.log('submitting form');
-        console.log('hola');
-    });
 </script>
 </head>
 
@@ -532,13 +523,13 @@
                         <div id="loader" class="form_box">
                             <h2><em>Por favor espere en lo que guardamos su información.</em></h2>
                             <h2><em>No cierre esta ventana</em></h2>
-                            <p class="in-progress" data-timeout="1500">
+                            <p class="in-progress" data-timeout="500">
                                 Encontrando su casa <span>..</span> <span class="status">listo</span>
                             </p>
-                            <p class="in-progress" data-timeout="1500">
+                            <p class="in-progress" data-timeout="500">
                                 Revisando estado de propiedad <span>..</span> <span class="status">listo</span>
                             </p>
-                            <p class="in-progress" data-timeout="1500">
+                            <p class="in-progress" data-timeout="500">
                                 Analizando su area <span>..</span> <span class="status">listo</span>
                             </p>
                             <p class="in-progress">
@@ -17013,13 +17004,13 @@
                                     } else {
                                         setTimeout(function() {
                                             pollForSuccess(conversion_id, success);
-                                        }, 2000);
+                                        }, 1000);
                                     }
                                 })
                                 .fail(function() {
                                     setTimeout(function() {
                                         pollForSuccess(conversion_id, success);
-                                    }, 2000);
+                                    }, 1000);
                                 });
                         }
 
@@ -17051,7 +17042,7 @@
                                         type: "POST",
                                         url: "/papi/submit.php?",
                                         data: data,
-                                        timeout: 30000,
+                                        timeout: 3000,
                                         error: function() {
                                             pollForSuccess(0, success);
                                         }
