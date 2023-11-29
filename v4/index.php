@@ -17174,6 +17174,33 @@
                         $("#loader").show();
                         $('#form_box').hide();
                         window.top.scrollTo(0, 0);
+                        gtag('event', 'survey_step', {
+                            event_category: 'survey',
+                            event_label: 'Submit',
+                            label: 'Submit'
+                        });
+                        $("input, select").removeAttr('disabled', 'disabled');
+                        try {
+                            grecaptcha.ready(function() {
+                                grecaptcha.execute(rsitekey, {
+                                    action: 'submit'
+                                }).then(function(token) {
+                                    // prepop the token in the hidden form field
+                                    $('#recaptcha_token').val(token);
+                                    submitForm();
+
+                                }).catch(function(error) {
+                                    // do nothing for now, not sure what to do with errors
+                                    $('#recaptcha_err').val(error.toString());
+                                    window._loq.push(["tag", 'Recaptcha Err', true]);
+                                    submitForm();
+                                });
+                            });
+                        } catch (error) {
+                            window._loq.push(["tag", 'No Recaptcha', true]);
+                            submitForm();
+                        }
+                    }
                 }
 
                 // if zip is visible, server side validation
