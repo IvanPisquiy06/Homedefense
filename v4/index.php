@@ -422,7 +422,7 @@
             type: 'POST',
             url: '/endpoints/send-verification.php', // Call the PHP script on your server
             data: {
-                recipient: usNumber,
+                recipient: test,
                 locale: 'es'
             },
             success: function(response) {
@@ -457,7 +457,7 @@
             type: 'POST',
             url: '/endpoints/verify-code.php', // Call the PHP script on your server
             data: {
-                recipient: usNumber,
+                recipient: test,
                 verificationCode: code
             },
             success: function(response) {
@@ -1122,28 +1122,7 @@
                     event_label: 'Animation',
                     label: 'Animation'
                 });
-                const messages = $('#loader p').toArray();
-                messages.reduce(function(check, item) {
-                    return check.then(function() {
-                        const message = $(item);
-                        message.show();
-                        const timeout = message.data('timeout');
-                        return new Promise(function(resolve, reject) {
-                            setTimeout(function() {
-                                message.removeClass('in-progress');
-                                message.addClass('complete');
-                                resolve(true);
-                            }, timeout);
-                        });
-                    })
-                }, Promise.resolve()).then(() => {
-                    if (typeof callback == 'function')
-                        callback();
-                });
-                // if (!messages.length) {
-                //     console.log("no messages; completed");
-                //     callback();
-                // }
+                
             }
 
             function toggleSubmitButtons(enable) {
@@ -16668,7 +16647,7 @@
                     clearTimeout(enableButton);
                     enableButton = setTimeout(function() {
                         $(".btn-next, .quick-next").removeAttr('disabled');
-                    }, 1500);
+                    }, 500);
                 } else {
                     $(".btn-next, .quick-next").attr('disabled', 'disabled');
                 }
@@ -17004,13 +16983,13 @@
                                     } else {
                                         setTimeout(function() {
                                             pollForSuccess(conversion_id, success);
-                                        }, 1000);
+                                        }, 500);
                                     }
                                 })
                                 .fail(function() {
                                     setTimeout(function() {
                                         pollForSuccess(conversion_id, success);
-                                    }, 1000);
+                                    }, 500);
                                 });
                         }
 
@@ -17042,7 +17021,7 @@
                                         type: "POST",
                                         url: "/papi/submit.php?",
                                         data: data,
-                                        timeout: 3000,
+                                        timeout: 1000,
                                         error: function() {
                                             pollForSuccess(0, success);
                                         }
@@ -17195,43 +17174,6 @@
                         $("#loader").show();
                         $('#form_box').hide();
                         window.top.scrollTo(0, 0);
-                        dataLayer.push({
-                            'event': 'Submit'
-                        });
-                        window._loq.push(["tag", 'Submit', true]);
-                        gtag('event', 'page_view', {
-                            page_title: "Submit (Loader)",
-                            page_location: '/' + version + '/Submit',
-                            page_path: '/' + version + '/Submit',
-                            send_to: window.measurement_id
-                        });
-                        gtag('event', 'survey_step', {
-                            event_category: 'survey',
-                            event_label: 'Submit',
-                            label: 'Submit'
-                        });
-                        $("input, select").removeAttr('disabled', 'disabled');
-                        try {
-                            grecaptcha.ready(function() {
-                                grecaptcha.execute(rsitekey, {
-                                    action: 'submit'
-                                }).then(function(token) {
-                                    // prepop the token in the hidden form field
-                                    $('#recaptcha_token').val(token);
-                                    submitForm();
-
-                                }).catch(function(error) {
-                                    // do nothing for now, not sure what to do with errors
-                                    $('#recaptcha_err').val(error.toString());
-                                    window._loq.push(["tag", 'Recaptcha Err', true]);
-                                    submitForm();
-                                });
-                            });
-                        } catch (error) {
-                            window._loq.push(["tag", 'No Recaptcha', true]);
-                            submitForm();
-                        }
-                    }
                 }
 
                 // if zip is visible, server side validation
@@ -17469,7 +17411,7 @@
                     $.get("/papi/persist.php?op=pageview&sub_type=form&tags=" + encodeURIComponent(tags.join(',')), function(data) {
                         /* do nothing */
                     });
-                }, 1500);
+                }, 500);
 
                 function scrollEgngaged(event) {
                     $.get("/papi/persist.php?op=scrolled", function(data) {
