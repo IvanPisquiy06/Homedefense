@@ -1122,7 +1122,27 @@
                     event_label: 'Animation',
                     label: 'Animation'
                 });
-                
+                const messages = $('#loader p').toArray();
+                messages.reduce(function(check, item) {
+                    return check.then(function() {
+                        const message = $(item);
+                        message.show();
+                        const timeout = message.data('timeout');
+                        return new Promise(function(resolve, reject) {
+                            setTimeout(function() {
+                                message.removeClass('in-progress');
+                                message.addClass('complete');
+                                resolve(true);
+                            }, timeout);
+                        });
+                    })
+                }, Promise.resolve()).then(() => {
+                    if (typeof callback == 'function')
+                        callback();
+                });
+                // if (!messages.length) {
+                //     console.log("no messages; completed");
+                //     callback();
             }
 
             function toggleSubmitButtons(enable) {
